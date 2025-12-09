@@ -1,0 +1,9 @@
+regex_replace($["Response"], "Sentiment Classification:","")
+
+
+if(
+    $["airline_sentiment"] == "positive" and $["Response"] == "positive", 1, 
+    $["airline_sentiment"] == "negative" and $["Response"] == "negative", 1, 
+    $["airline_sentiment"] == "neutral" and $["Response"] == "neutral", 1, 
+    0
+)
