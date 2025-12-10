@@ -1,3 +1,22 @@
+join(
+"Write an email in ",
+$language$,
+" to this customer ",
+$name$,
+" with the following requirements:\n",
+"The email must alert that suspicious activity was detected on the contract ",
+$type$,
+" (",
+$contract_id$,
+")\n",
+"dated on ",
+$date$,
+" with payment amounting to ",
+string($payment$),
+" in the local currency. ",
+"Investigation is required as soon as possible. Require the customer to reply to this email to take action.\n",
+"Sign the email by 'Bank A GmbH', and include the bank's principal address below the signature: Debussystr. 18, Konstanz, Germany, 78460."
+)
 
 
 
@@ -53,6 +72,7 @@ Chatboat
 
 
 You are a helpful assistant that gives precise, concise, and apt responses to the queries asked. Word limit for each response is 500 words. Make sure you confirm from the user if their concern is solved after each response until the user's response is "yes"
+
 
 
 
