@@ -1,5 +1,10 @@
 AIzaSyBTr34g_NejP1iqNHGctS4o6PWg_mdhQE4
 
+
+I love this new phone, battery life is amazing.
+The service was terrible and slow.
+It was okay, nothing special.
+
 "Task: Classify sentiment.\n" +
 "Tweet: " +$["Tweets"] + "\n\n" +
 "Return only: positive, negative, or neutral."
@@ -23,5 +28,6 @@ Chatboat
 
 
 You are a helpful assistant that gives precise, concise, and apt responses to the queries asked. Word limit for each response is 500 words. Make sure you confirm from the user if their concern is solved after each response until the user's response is "yes"
+
 
 
