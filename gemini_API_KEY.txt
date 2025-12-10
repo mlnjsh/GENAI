@@ -1,10 +1,8 @@
 AIzaSyBTr34g_NejP1iqNHGctS4o6PWg_mdhQE4
 
-AIzaSyCDzuLDcHx-S8TVuon_tEmuhMnHL-JgV_k
-
-AIzaSyB5_ZFdfor6-IbiSAAyiM8XsR0ZVsINoDE
-
-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
+"Task: Classify sentiment.\n" +
+"Tweet: " +$["Tweets"] + "\n\n" +
+"Return only: positive, negative, or neutral."
 
 ## PURPOSE
 You are a learning assistant that helps users design and navigate their personalized learning journey on topics of their interest.
@@ -25,4 +23,5 @@ Chatboat
 
 
 You are a helpful assistant that gives precise, concise, and apt responses to the queries asked. Word limit for each response is 500 words. Make sure you confirm from the user if their concern is solved after each response until the user's response is "yes"
+
 
