@@ -83,3 +83,70 @@ option = {
     }
   ]
 };
+------------------------------------------------------------------------------------
+
+
+
+// Fetch the data for OriginCountry and RiskLevelLabel columns
+const data = await inputTable.getData(["OriginCountry", "RiskLevelLabel"]);
+
+// Prepare nodes and links for the Sankey chart
+const nodes = [];
+const links = [];
+
+// Create a mapping for nodes to ensure unique entries
+const nodeMap = new Map();
+
+data.forEach(([origin, riskLevel]) => {
+  // Add origin country to nodes if not already present
+  if (!nodeMap.has(origin)) {
+    nodeMap.set(origin, nodes.length);
+    nodes.push({ name: origin });
+  }
+
+  // Add risk level to nodes if not already present
+  if (!nodeMap.has(riskLevel)) {
+    nodeMap.set(riskLevel, nodes.length);
+    nodes.push({ name: riskLevel });
+  }
+
+  // Add a link between origin and risk level
+  const sourceIndex = nodeMap.get(origin);
+  const targetIndex = nodeMap.get(riskLevel);
+
+  // Check if a link already exists, if so, increment its value
+  const existingLink = links.find(
+    (link) => link.source === sourceIndex && link.target === targetIndex
+  );
+  if (existingLink) {
+    existingLink.value += 1;
+  } else {
+    links.push({ source: sourceIndex, target: targetIndex, value: 1 });
+  }
+});
+
+option = {
+  title: {
+    text: "Sankey Chart: Origin Country to Risk Level",
+    left: "center"
+  },
+  tooltip: {
+    trigger: "item",
+    triggerOn: "mousemove"
+  },
+  series: [
+    {
+      type: "sankey",
+      layout: "none",
+      data: nodes,
+      links: links,
+      emphasis: {
+        focus: "adjacency"
+      },
+      lineStyle: {
+        color: "gradient",
+        curveness: 0.5
+      }
+    }
+  ]
+};
