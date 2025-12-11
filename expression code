@@ -35,3 +35,51 @@ option = {
     }
   ]
 };
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+// Fetch the data from the input table
+const data = await inputTable.getData(["FirmName", "Sum(Value)"]);
+
+// Sort the data in descending order based on the values
+data.sort((a, b) => b[1] - a[1]);
+
+// Map the data to the format required for the bar chart
+const seriesData = data.map(([name, value], index) => ({
+  value,
+  itemStyle: {
+    color: index < 3 ? 'red' : 'blue' // Highlight the top 3 firms in red, others in blue
+  }
+}));
+
+option = {
+  title: {
+    text: 'Firm Values',
+    left: 'center'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  xAxis: {
+    type: 'category',
+    data: data.map(([name]) => name), // Firm names on the x-axis
+    axisLabel: {
+      rotate: 45 // Rotate labels for better readability if needed
+    }
+  },
+  yAxis: {
+    type: 'value',
+    name: 'Sum(Value)'
+  },
+  series: [
+    {
+      type: 'bar',
+      data: seriesData // Use the processed data for the bar chart
+    }
+  ]
+};
