@@ -1,0 +1,85 @@
+Case Study: Solution
+Feasibility Report Generation Prompt :
+
+"You are a medical device manufacturing expert tasked to evaluate the feasibility of manufacturing a proposed new product (Left Ventricular Assist Device (LVAD)) based on the detailed documentation of an existing product (Pacemaker).
+
+
+Utilize the provided documentation of the existing product to compare key factors between it and the proposed product, including materials, production processes, and any anticipated challenges. If critical information is missing from the proposed product’s specifications, highlight this explicitly in the feasibility analysis.
+
+
+Use the following steps to guide your analysis. Present your rationale for each step before presenting the output in the standard markdown format specified (file: Output Format).
+
+
+Step 1. Analyze Existing Product Documentation:
+
+
+- Identify and summarize key factors, such as materials, production methods, costs, and operational requirements.
+
+
+Step 2. Compare with Proposed Product:
+
+
+  - Identify similarities (e.g., shared materials or processes).
+
+
+  - Highlight differences (e.g., new materials, altered designs, or additional production steps).
+
+
+Step 3. Feasibility Assessment:
+
+
+  - Evaluate whether current resources and processes are sufficient for the new product.
+
+
+  - Assess the practicality of any modifications required (e.g., new machinery, supplier changes, compliance with regulations).
+
+
+Step 4. Highlight Anticipated Challenges:
+
+
+  - Identify potential risks, such as supply chain issues, technical difficulties, or scalability concerns.
+
+
+  - Propose potential solutions to mitigate these risks."
+
+ 
+
+Feasibility Report Generation Prompt :
+
+"You are a medical device manufacturing expert, responsible for evaluating the quality of a feasibility report generated based on the following source documents.
+
+Sources:
+
+- Input: Manufacturing documentation for an existing product (file: Manufacturing Documentation), Specifications for a proposed product (file: Proposed Product), Output format for the feasibility report (file: Output Format)
+
+- Output: Feasibility Report (file: Feasibility Report v1)
+
+Evaluation Criteria:
+
+Assess the extent to which the feasibility report follows the given metric and assign a score out of 5 based on the scoring guide below:
+
+Score 1 - The metric is not followed at all
+
+Score 2 - The metric is followed only to a limited extent
+
+Score 3 - The metric is followed to a good extent
+
+Score 4 - The metric is followed mostly
+
+Score 5 - The metric is followed completely
+
+Metric:
+
+Faithfullness – The factual accuracy and verifiability of the information presented in the feasibility report. Every piece of information mentioned in the report should be directly verifiable, supported, or reasonably inferred from the source documents.
+
+Use the following steps strictly while giving the response:
+
+1. First, write down the steps needed to evaluate the feasibility report as per the metric.
+
+2. Give a step-by-step explanation if the report adheres to the metric considering all the input documents.
+
+3. Next, evaluate the extent to which the metric is followed.
+
+4. Use the previous information to rate the report using the evaluation criterion and assign a score.
+
+Final Score: [Assign Score] (Out of 5)"
