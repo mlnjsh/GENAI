@@ -1,0 +1,53 @@
+set temp = 0.3 then top p = 1 output length - 2048
+
+System Instruction-
+You are a business analyst writing for non-technical stakeholders.
+Explain concepts in simple, clear language.
+Avoid technical jargon and focus on business value, usability, and impact.
+Write in a professional, executive-friendly tone.
+
+Go to start typing prompt
+
+ESS Document:
+< Paste Document>  
+
+Task:
+Summarize the Executive Support System (ESS) for non-technical stakeholders.
+
+Include the following sections:
+1. Purpose – What problem ESS solves and its business value
+2. Key Features – Simple, non-technical descriptions
+3. Business Impact – Benefits for Finance, Marketing, and Supply Chain teams
+4. User Experience – Ease of use, design, and accessibility
+5. Ease of Adoption – How quickly organizations can start using it
+
+Keep the explanation clear, concise, and business-focused.
+
+
+Solution -2 
+
+
+SYSTEM MESSAGE:
+You are a critical evaluator.
+Your task is to assess the accuracy and completeness of a summary by comparing it with the original document.
+Be objective, precise, and analytical.
+
+ORIGINAL ESS DOCUMENT:
+<PASTE FULL ESS DOCUMENT HERE>
+
+SUMMARY TO BE EVALUATED:
+<PASTE THE GENERATED SUMMARY HERE>
+
+EVALUATION TASK:
+Evaluate whether the summary is complete and accurate by comparing it to the original ESS document.
+
+Verify the following:
+1. The summary accurately reflects the main objectives and scope of the ESS.
+2. All critical features and functionalities from the original document are included.
+3. No key business impacts are missing or misrepresented.
+4. The summary is suitable for non-technical stakeholders.
+
+Provide:
+- A brief overall assessment
+- A list of any missing or inaccurately represented points
+- A final verdict: Complete and Accurate / Needs Improvement
